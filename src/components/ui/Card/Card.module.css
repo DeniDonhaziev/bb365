@@ -1,0 +1,40 @@
+.root {
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.default {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.surface {
+  background: var(--color-surface-solid);
+}
+
+.elevated {
+  background: var(--color-surface-elevated);
+  border-color: var(--color-border-strong);
+}
+
+.accent {
+  background: linear-gradient(145deg, #ff8c00 0%, #e66a00 100%);
+  border-color: transparent;
+}
+
+.pad_none {
+  padding: 0;
+}
+
+.pad_sm {
+  padding: var(--space-3);
+}
+
+.pad_md {
+  padding: var(--space-4);
+}
+
+.pad_lg {
+  padding: var(--space-5);
+}

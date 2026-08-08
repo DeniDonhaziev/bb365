@@ -1,0 +1,297 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  min-width: 0;
+}
+
+.tabs {
+  width: 100%;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+}
+
+.mainCol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* ——— Daily rewards banner ——— */
+.rewardsCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: 92px;
+  padding: 14px 16px 14px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(210, 170, 255, 0.22);
+  background:
+    radial-gradient(ellipse 80% 120% at 85% 50%, rgba(180, 90, 255, 0.35), transparent 55%),
+    linear-gradient(100deg, #6b2fbf 0%, #7a35c8 40%, #5c229e 100%);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.rewardsCard:hover {
+  opacity: 0.97;
+}
+
+.rewardsCard:active {
+  transform: scale(0.99);
+}
+
+.rewardsText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.rewardsTitle {
+  font-size: 1.05rem;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.rewardsSub {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: var(--font-weight-semibold);
+}
+
+.rewardsGift {
+  flex-shrink: 0;
+  width: 96px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -4px;
+}
+
+.giftImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ——— Character ——— */
+.characterCard {
+  border-radius: 20px;
+  border: 1px solid rgba(180, 140, 230, 0.18);
+  background: rgba(55, 28, 110, 0.72);
+  padding: 16px 16px 20px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.characterTitle {
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 8px;
+  color: var(--color-text-primary);
+}
+
+.lockStage {
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1.05;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lockGlow {
+  position: absolute;
+  width: 78%;
+  height: 78%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 190, 80, 0.42) 0%,
+    rgba(200, 120, 255, 0.2) 38%,
+    rgba(100, 40, 160, 0.08) 62%,
+    transparent 75%
+  );
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.lockHex {
+  position: relative;
+  width: 58%;
+  max-width: 128px;
+  aspect-ratio: 100 / 110;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hexBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 16px rgba(180, 120, 255, 0.25));
+}
+
+.lockImg {
+  position: relative;
+  z-index: 1;
+  width: 54%;
+  height: auto;
+  max-height: 62%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 14px rgba(255, 150, 40, 0.45));
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ——— Stats ——— */
+.statsCard {
+  border-radius: 20px;
+  border: 1px solid rgba(180, 140, 230, 0.18);
+  background: rgba(55, 28, 110, 0.72);
+  padding: 14px 8px 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  overflow: visible;
+}
+
+.statsTitle {
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 4px;
+  text-align: center;
+}
+
+/* ——— Settings ——— */
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 20px;
+  border: 1px solid rgba(180, 140, 230, 0.18);
+  background: rgba(55, 28, 110, 0.72);
+  padding: 8px;
+  max-width: 480px;
+}
+
+.settingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.settingRow:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.switch {
+  width: 44px;
+  height: 24px;
+  accent-color: var(--color-orange);
+  cursor: pointer;
+}
+
+/* ——— Desktop: compact two-column ——— */
+@media (min-width: 1024px) {
+  .page {
+    max-width: 920px;
+    gap: var(--space-4);
+    margin: 0;
+  }
+
+  .tabs {
+    max-width: 400px;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+    grid-template-areas: 'main rewards';
+    gap: 16px;
+    align-items: start;
+  }
+
+  .mainCol {
+    grid-area: main;
+    gap: 14px;
+  }
+
+  .rewardsCard {
+    grid-area: rewards;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 0;
+    padding: 18px 16px 12px;
+    gap: 8px;
+  }
+
+  .rewardsGift {
+    width: 100%;
+    height: 110px;
+    margin: 0;
+    align-self: center;
+  }
+
+  .giftImg {
+    max-width: 140px;
+  }
+
+  .characterCard {
+    padding: 14px 14px 12px;
+  }
+
+  .lockStage {
+    max-width: 180px;
+    aspect-ratio: 1.15;
+  }
+
+  .statsCard {
+    padding: 12px 10px 10px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .page {
+    max-width: 960px;
+  }
+
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 18px;
+  }
+}

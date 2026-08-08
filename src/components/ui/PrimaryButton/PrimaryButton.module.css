@@ -1,0 +1,39 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.root:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.full {
+  width: 100%;
+}
+
+.primary {
+  background: var(--color-btn-primary-bg);
+  color: var(--color-btn-primary-text);
+}
+
+.ghost {
+  background: var(--color-btn-disabled-bg);
+  color: var(--color-text-primary);
+}
+
+.disabledLook {
+  background: var(--color-btn-disabled-bg);
+  color: var(--color-btn-disabled-text);
+  cursor: default;
+}
+
+.root:disabled {
+  cursor: default;
+}

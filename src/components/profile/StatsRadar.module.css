@@ -1,0 +1,94 @@
+.wrap {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  /* space for corner labels around the svg */
+  padding: 22px 8px 20px;
+  box-sizing: border-box;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.corner {
+  position: absolute;
+  z-index: 2;
+  max-width: 42%;
+  pointer-events: none;
+}
+
+.tl {
+  top: 0;
+  left: 0;
+}
+
+.tr {
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+
+.bl {
+  bottom: 0;
+  left: 0;
+}
+
+.br {
+  bottom: 0;
+  right: 0;
+  text-align: right;
+}
+
+.iconRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.tr .iconRow,
+.br .iconRow {
+  justify-content: flex-end;
+}
+
+.valueText {
+  fill: #fff;
+  font-size: 11.5px;
+  font-weight: 700;
+  font-family: var(--font-family);
+}
+
+@media (min-width: 390px) {
+  .wrap {
+    max-width: 340px;
+    padding: 24px 10px 22px;
+  }
+
+  .iconRow {
+    font-size: 0.78rem;
+  }
+
+  .valueText {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    max-width: 360px;
+    padding: 22px 12px 20px;
+  }
+
+  .iconRow {
+    font-size: 0.82rem;
+  }
+}

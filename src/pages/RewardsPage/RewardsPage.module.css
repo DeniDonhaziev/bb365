@@ -1,0 +1,203 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 8px var(--layout-pad-x) 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  min-height: 40px;
+  margin-bottom: 6px;
+}
+
+.close {
+  justify-self: start;
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  padding: 6px 2px;
+  min-height: 40px;
+}
+
+.headerTitle {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+}
+
+.headerSpacer {
+  justify-self: end;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-extrabold);
+  margin: 4px 0 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+}
+
+.dayCard {
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(130, 85, 190, 0.52);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dayHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 7px 4px;
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-semibold);
+  background: rgba(0, 0, 0, 0.14);
+  color: var(--color-text-primary);
+}
+
+.dayBody {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px 10px;
+}
+
+.st_claimed {
+  background: rgba(42, 22, 88, 0.95);
+}
+
+.st_available {
+  border-color: rgba(255, 200, 80, 0.5);
+  box-shadow: inset 0 0 0 1px rgba(255, 190, 70, 0.2);
+}
+
+.st_locked {
+  background: rgba(122, 81, 181, 0.42);
+}
+
+.st_special {
+  background: rgba(130, 85, 190, 0.48);
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  font-size: 9px;
+  line-height: 1;
+}
+
+.rewardIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.rewardAmount {
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.giftVisual {
+  width: 52px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.giftImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25));
+}
+
+.footer {
+  margin-top: 16px;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.claimBtn {
+  min-height: 48px;
+  font-size: 0.95rem;
+}
+
+/* Desktop: compact game calendar, not oversized dashboard */
+@media (min-width: 1024px) {
+  .page {
+    max-width: 520px;
+    min-height: auto;
+    padding: 20px 24px 28px;
+    margin: 24px auto;
+  }
+
+  .grid {
+    gap: 8px;
+  }
+
+  .dayCard {
+    min-height: 88px;
+    border-radius: 12px;
+  }
+
+  .dayHeader {
+    padding: 6px 4px;
+    font-size: 0.75rem;
+  }
+
+  .giftVisual {
+    width: 46px;
+    height: 42px;
+  }
+
+  .title {
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+  }
+
+  .claimBtn {
+    min-height: 46px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .page {
+    max-width: 560px;
+  }
+
+  .dayCard {
+    min-height: 92px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .page {
+    max-width: 580px;
+  }
+}
